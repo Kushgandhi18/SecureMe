@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home"
+    tools:showIn="@layout/activity_home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/homeback">
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:textColor="@color/white"
+            android:text="hi , Meet Patel"
+            android:gravity="center"
+            android:textSize="25dp"
+            />
+        <RelativeLayout
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/location"
+                android:id="@+id/locimg"
+                />
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:gravity="center"
+                android:maxLines="5"
+                android:layout_toRightOf="@+id/locimg"
+                android:textColor="@color/white"
+                android:text="Current Location"
+                />
+
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/editp"
+            android:layout_width="150dp"
+            android:background="@drawable/round_button"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+             android:layout_height="wrap_content"
+            android:text="Edit Profile"></Button>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/but1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:padding="10dp">
+        <RelativeLayout
+            android:background="@drawable/round_button"
+            android:id="@+id/trac"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/img"
+
+                app:srcCompat="@drawable/trackicon"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:text="Track Me"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@drawable/round_button"
+            android:id="@+id/tracyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/img4"
+
+                app:srcCompat="@drawable/navigation"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Tracking"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img4"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/but2"
+        android:layout_width="200dp"
+        android:background="@drawable/round_button"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/but1">
+        <RelativeLayout
+            android:id="@+id/imer"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgs"
+                app:srcCompat="@drawable/sendmsg"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="Family Help"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/imgs"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/but3"
+        android:layout_width="200dp"
+        android:background="@drawable/round_button"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/but2"
+        android:padding="10dp">
+        <RelativeLayout
+            android:id="@+id/ano"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgk"
+                app:srcCompat="@drawable/comment"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="Complaint"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/imgk"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

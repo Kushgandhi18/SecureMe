@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".anonyscreen"
+    tools:showIn="@layout/activity_anonyscreen">
+
+    <TextView
+        android:id="@+id/imglab"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:layout_below="@+id/imglab"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_image_black_24dp"
+        android:id="@+id/img"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_orange2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:text="Description"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/deslab"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="5"
+        android:maxLines="5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="write here"
+        android:id="@+id/etdes"
+        android:gravity="bottom|right"
+        android:layout_below="@+id/deslab"
+        android:padding="10dp"
+        android:background="@drawable/border_orange2"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/locicon"
+        android:src="@drawable/location_blue"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/etdes"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#2196F3"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="Location"
+        android:layout_below="@+id/locicon"
+        android:id="@+id/location"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:maxLines="5"
+        android:minLines="2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btn"
+        android:textColor="@color/white"
+        android:background="#515050"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

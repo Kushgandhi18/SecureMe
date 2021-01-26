@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".userinfo"
+    tools:showIn="@layout/activity_userinfo">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_blue">
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/lgo"
+        android:layout_centerHorizontal="true"
+        android:text="User Information"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp">
+        <RelativeLayout
+            android:id="@+id/signblock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border_orange6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/firstname"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:elevation="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/border_orange6"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/im1"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/userlogo" />
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etfirstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="First Name"
+                        android:background="@color/white"
+                        android:inputType="text"
+                        android:textSize="15dp"
+                        android:paddingLeft="10dp"
+                        android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelAnimating="true"
+                        app:paddingStart="10dp"
+                        app:met_textColorHint="@color/black"
+                        app:met_primaryColor="?colorAccent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lastname"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/border_orange6"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/im2"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/userlogo" />
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etlastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Last Name"
+                        android:background="@color/white"
+                        android:inputType="text"
+                        android:textSize="15dp"
+                        android:paddingLeft="10dp"
+                        android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelAnimating="true"
+                        app:paddingStart="10dp"
+                        app:met_textColorHint="@color/black"
+                        app:met_primaryColor="?colorAccent" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/li1"
+                android:layout_below="@+id/name"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:elevation="3dp"
+                android:background="@drawable/border_orange6"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im3"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:src="@drawable/call" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/num1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Number 1"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/li2"
+                android:layout_below="@+id/li1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:elevation="3dp"
+                android:background="@drawable/border_orange6"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:src="@drawable/call" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/num2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Number 2"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/li3"
+                android:layout_below="@+id/li2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:elevation="3dp"
+                android:background="@drawable/border_orange6"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imsds"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:src="@drawable/call" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/num3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Number 3"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+            <Button
+                android:layout_below="@+id/li3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_orange6"
+                android:text="Register"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/lgo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo"
+
+        android:background="@drawable/border_orange6"/>
+
+
+</RelativeLayout>

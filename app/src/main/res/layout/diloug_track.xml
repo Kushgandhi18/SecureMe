@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/app_blue"
+        android:id="@+id/rel1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+
+            app:srcCompat="@drawable/cancleicon"
+            android:id="@+id/canclebtn"/>
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            app:srcCompat="@drawable/navigation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:id="@+id/delicon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="Track Him / Her"
+            android:layout_below="@+id/delicon"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/des"
+            android:text="Enter number whom you want to track"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/md_white_off"
+
+            android:textSize="15dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/md_grey_300"
+        android:id="@+id/rel2"
+        android:layout_below="@+id/rel1">
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text=" Find "
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:id="@+id/btn"
+            android:background="#5b5958"
+           android:textColor="@color/white">
+
+        </Button>
+
+        <ProgressBar
+            android:id="@+id/pg"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/rel1"
+        android:layout_marginTop="-25dp"
+        android:hint="99999999"
+        android:inputType="number"
+        android:id="@+id/num"
+        android:textColor="@color/black"
+        android:textColorHint="#9b9a9a"
+        android:textSize="23dp"
+        android:background="@drawable/border_orange6"
+        android:gravity="center"/>
+
+
+</RelativeLayout>

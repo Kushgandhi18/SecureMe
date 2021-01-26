@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VSecure</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_userinfo">userinfo</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_anonyscreen">anonyscreen</string>
+    <string name="title_activity_splashscreen">Splashscreen</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
