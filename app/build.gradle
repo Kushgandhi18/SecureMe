@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    namespace 'friendlyitsolution.com.ms.vsecure'
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -37,7 +38,11 @@ dependencies {
 
     implementation 'com.polyak:icon-switch:1.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'androidx.test.ext:junit:1.1.5'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+//    classpath 'com.google.gms:google-services:4.3.8'
+//    classpath 'com.android.tools.build:gradle:8.3.0'
 }

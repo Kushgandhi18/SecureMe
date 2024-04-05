@@ -6,15 +6,20 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -26,6 +31,9 @@ import java.util.Map;
 public class userinfo extends AppCompatActivity {
     MaterialEditText fname,lname,num1,num2,num3;
     Button btn;
+
+    //FirebaseDatabase database = FirebaseDatabase.getInstance();
+    //DatabaseReference myRef = database.getReferenceFromUrl("https://v-5fb6d-default-rtdb.asia-southeast1.firebasedatabase.app/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +82,7 @@ public class userinfo extends AppCompatActivity {
         pd.setCancelable(false);
         pd.setMessage("please wait");
         pd.show();
-        Map<String,Object> userdata=new HashMap<>();
+        HashMap<String,Object> userdata=new HashMap<>();
         userdata.put("name",fname.getText().toString()+" "+lname.getText().toString());
         userdata.put("num1",num1.getText().toString());
         userdata.put("num2",num2.getText().toString());
@@ -89,10 +97,18 @@ public class userinfo extends AppCompatActivity {
         // lastloc.put("time",formattedDate);
         // userdata.put("lastlocation",lastloc);
 
+        Log.d("correct", "correct");
+        //Log.d("mynumber", Myapp.mynumber + " ");
+
+
+
         Myapp.ref.child("users").child(Myapp.mynumber).setValue(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
 
             @Override
             public void onComplete(@NonNull Task<Void> task) {
+
+                Log.d("onComplete", "onComplete");
+
                 pd.dismiss();
                 SharedPreferences.Editor edit=Myapp.pref.edit();
                 edit.putString("data","yes");
@@ -104,6 +120,8 @@ public class userinfo extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     void register()

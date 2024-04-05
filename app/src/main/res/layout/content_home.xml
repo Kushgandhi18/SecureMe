@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/name"
             android:textColor="@color/white"
-            android:text="hi , Meet Patel"
+            android:text="hi , User"
             android:gravity="center"
             android:textSize="25dp"
             />

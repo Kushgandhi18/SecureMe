@@ -58,7 +58,12 @@ public class Myapp extends Application
         super.onCreate();
         db= FirebaseDatabase.getInstance();
         db.setPersistenceEnabled(true);
-        ref=db.getReference();
+        try{
+            ref=db.getReferenceFromUrl("https://v-5fb6d-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        }
+        catch (Exception e){
+            Log.d("exception", e.toString());
+        }
         sInstance=this;
         con=getApplicationContext();
         pref=getSharedPreferences("myinfo",MODE_PRIVATE);
